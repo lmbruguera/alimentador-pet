@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PET-FEED</title>
+    <script>
+        function showPw() {
+          var x = document.getElementById("wifi-pw");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+      </script>
+
+      <style>
+          body{
+              text-align: center;
+          }
+          .box {
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 2em;
+              width: 20em;
+              height: 13em;
+
+              border: none;
+              border-radius: 5px;
+              box-shadow: 1px 1px 3px 2px #e3e3e3;
+          }
+      </style>
+
+
 </head>
 <body>
+
+    <div class="box">
+        <section>
+            <form action="configSave" method="POST">
+                <p>WIFI Config</p>
+                <label for="ssid">SSID: </label>
+                <input type="text" id="ssid" value="#ssid#"/>
+                <br>
+                <label for="wifi-pw">PASSWORD: </label>
+                <input type="password" name="pass" id="wifi-pw"/><br>
+                <input type="checkbox" unchecked onclick="showPw()"/>Show password
+                <br><br>
+                <label for="time1">First meal hour</label>
+                <input type="number"
+                name="time1"
+                id=""
+                min="0"
+                max="24"/><br>
+                <label for="time2">Second meal hour</label>
+                <input type="number"
+                name="time2"
+                min="0"
+                max="24"/><br>
+                <label for="time3">Third meal hour</label>
+                <input type="number"
+                name="time3"
+                id=""
+                min="0"
+                max="24"/>
+            </form>
+        </section>
+    </div>
 
 </body>
 </html>
